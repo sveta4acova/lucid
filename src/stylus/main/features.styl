@@ -1,0 +1,22 @@
+.features
+  @extend $flexContainer
+  position relative
+  background-color $white
+  border-bottom 1px solid $whiteSmoky
+  padding-top 60px
+
+  &__content
+    @extend $mainContainer
+
+  &__cards
+    @extend $flexDisplay
+    @extend $flexJustifyBetween
+    max-width 100%
+    padding 74px 10px 70px 10px
+    overflow hidden
+
+    .card
+      flex 0 1 250px
+
+
+

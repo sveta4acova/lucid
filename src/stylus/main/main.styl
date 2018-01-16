@@ -1,0 +1,55 @@
+.main
+  @extend $flexContainer
+  @extend $backgroundPosition
+  align-items stretch
+  height 640px
+  background-image: url(../images/common/backgrounds/bg-01.jpg)
+
+  &.animate
+    .main__image
+      transition all .8s linear .2s
+      transform translateY(0)
+      opacity 1
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+    @extend $flexJustifyBetween
+    @extend $alignItemsCenter
+
+  &__description
+    max-width 500px
+    padding 4% 10px 0 0
+    align-self center
+
+  &__title
+    @extend $blueTitle
+
+  &__caption
+    color $white
+    line-height 1
+    letter-spacing -0.9px
+
+  &__title,
+  &__caption
+    margin-bottom 22px
+
+  &__paragraph
+    margin-bottom 13%
+
+  &__image
+    @extend $transitionDefault
+    align-self flex-end
+    margin 0 -1.2% -100px 0
+    transform translateY(100%)
+    opacity 0
+
+  &__btn-container
+    white-space nowrap
+
+  .default-button
+    &:first-child
+      margin-right 20px
+
+
+

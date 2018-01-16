@@ -1,0 +1,71 @@
+.contact
+  @extend $flexContainer
+  background-color $whiteSmoky
+  padding 56px 0 304px 0
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+    @extend $alignItemsCenter
+    @extend $flexColumn
+
+  &__cards
+    @extend $flexDisplay
+    @extend $flexJustifyBetween
+    width 100%
+    margin 53px 0 70px 0
+    overflow hidden
+
+  &__form-container
+    padding 60px 85px 40px 66px
+    background-color #15141a
+    width 70%
+    max-width 770px
+
+  &__form
+    @extend $flexDisplay
+    justify-content center
+
+  &__form-left
+    @extend $flexDisplay
+    @extend $flexColumn
+    margin-right 20px
+
+  &__form-right
+    @extend $flexDisplay
+    @extend $flexColumn
+    align-items flex-end
+
+  &__form-left,
+  &__form-right
+    width 50%
+
+  &__form-input
+    margin-bottom 20px
+
+  &__form-message
+    sizeElement(100%, 190px)
+    resize none
+    padding-top 20px
+    padding-bottom 20px
+
+  &__form-input,
+  &__form-message
+    margin-bottom 20px
+
+  .card
+    flex 1
+
+    &__image-container
+      margin-bottom 20px
+
+    &__image
+      max-height 32px
+
+  .block-header
+    &__caption
+      &:after
+        bottom -24px
+
+  .default-button_blue
+    padding 0 32px

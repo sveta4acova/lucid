@@ -1,0 +1,26 @@
+{
+  "name": "lucid",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "sveta <svetlana.shurla4acova@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sveta4acova/lucid",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "svg4everybody": "^2.1.9",
+    "slick-carousel": "^1.8.1",
+    "jquery": "^3.2.1",
+    "animatescroll": "^1.0.7",
+    "jquery-validation": "^1.17.0"
+  },
+  "devDependencies": {}
+}

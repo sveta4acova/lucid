@@ -1,0 +1,24 @@
+.default-button
+  @extend $transitionDefault
+  @extend $textUppercase
+  @extend $defaultBorder
+  @extend $sourceSansProBold
+  @extend $smallFontSize
+  display inline-block
+  border-radius 4px
+  line-height 50px
+  padding 0 30px
+  white-space nowrap
+  cursor pointer
+  color $white
+  &:hover
+    background-color $blue
+    border-color $blue
+
+  &.default-button_blue
+    background-color $blue
+    border-color $blue
+    padding 0 26px
+    &:hover
+      background-color transparent
+      border-color $anthracite

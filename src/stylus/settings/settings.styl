@@ -1,0 +1,153 @@
+//color variables
+$white = #fff
+$whiteSnow = #fffefe
+$whiteSmoky = #ededed
+$blackGraphite = #1a1a1a
+$blackBlue = #15141a
+$anthracite = #444348
+$blue = #008ed6
+$lightGray = #999999
+
+//functions
+linear-interpolation($map)
+	if (length(keys($map)) != 2)
+		error('Map must have exactly 2 values.')
+	$keys   = keys($map)
+	$values = values($map)
+	$max-width = unit(pop($keys), '')
+	$max-size  = unit(pop($values), '')
+	$min-width = unit(pop($keys), '')
+	$min-size  = unit(pop($values), '')
+	$slope       = unit(($max-size - $min-size) / ($max-width - $min-width), '')
+	$y-intercept = $min-size - $slope * $min-width
+	$sign = \+
+	if $y-intercept < 0
+		$sign = \-
+		$y-intercept = abs($y-intercept)
+	unquote('calc(' + unit($slope * 100, vw) + ' ' + $sign + ' ' + unit($y-intercept, px) + ')')
+
+//extends
+$transitionDefault
+	transition all .3s
+
+$transitionSlow
+	transition all .8s linear
+
+$mainContainer
+	@extend $transitionDefault
+	position relative
+	width 90%
+	max-width 100%
+	@media screen and (min-width: 768px)
+		width 750px
+		max-width 750px
+	@media screen and (min-width: 992px)
+		width 970px
+		max-width 970px
+	@media screen and (min-width: 1200px)
+		width 1170px
+		max-width 1170px
+
+$flexDisplay
+	display flex
+
+$flexContainer
+	@extend $flexDisplay
+	justify-content center
+
+$pseudoElement
+	content ''
+	display block
+
+$alignItemsCenter
+	align-items center
+
+$flexColumn
+	flex-direction column
+
+$flexJustifyBetween
+	justify-content space-between
+
+$backgroundPosition
+	background-size cover
+	background-position center
+
+$sourceSansProBold
+	font-family "SourceSansPro-Bold"
+
+$sourceSansProSemibold
+	font-family "SourceSansPro-Semibold"
+
+$sourceSansProLight
+	font-family "SourceSansPro-Light"
+
+$sourceSansProItalic
+	font-family "SourceSansPro-Italic"
+
+$quicksandBold
+	font-family "Quicksand-Bold"
+
+$defaultFontSize
+	@media screen and (min-width: 1440px)
+		font-size 18px
+	font-size linear-interpolation((320px 13px) (992px 16px))
+
+$smallFontSize
+	@media screen and (min-width: 1440px)
+		font-size 14px
+	font-size linear-interpolation((320px 10px) (992px 12px))
+
+$smallerFontSize
+	font-size 9px
+
+$averageFontSize
+	@media screen and (min-width: 1440px)
+		font-size 16px
+	font-size linear-interpolation((320px 12px) (992px 14px))
+
+$middleFontSize
+	@media screen and (min-width: 1440px)
+		font-size 24px
+	font-size linear-interpolation((320px 16px) (992px 20px))
+
+$bigFontSize
+	@media screen and (min-width: 1440px)
+		font-size 36px
+	font-size linear-interpolation((320px 24px) (992px 30px))
+
+$hugeFontSize
+	@media screen and (min-width: 1440px)
+		font-size 48px
+	font-size linear-interpolation((320px 34px) (992px 40px))
+
+$centerText
+	text-align center
+
+$textUppercase
+	text-transform uppercase
+
+$defaultBorder
+	border 1px solid $anthracite
+
+$blueTitle
+	@extend $textUppercase
+	@extend $sourceSansProBold
+	color $blue
+	letter-spacing 1.1px
+
+//mixins
+elementPosition(position, top, left)
+	position position
+	top top
+	left left
+
+sizeElement(width, height)
+	width width
+	height height
+
+divider(bottom, width, bgSize)
+	@extend $pseudoElement
+	position relative
+	bottom bottom
+	sizeElement(width, 2px)
+	background url(../images/common/underline.svg) center/bgSize no-repeat

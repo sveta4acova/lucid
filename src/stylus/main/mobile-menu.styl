@@ -1,0 +1,22 @@
+.mobile-menu
+  @extend $flexContainer
+  @extend $alignItemsCenter
+  sizeElement(100%, 100%)
+  elementPosition(fixed, 0, 0)
+  background-color rgba(0, 3, 18, .9)
+  z-index 3
+  transform translateX(-100%)
+  opacity 0
+  animation hideInRight .6s forwards
+
+  &__wrap
+    @extend $flexContainer
+    @extend $flexColumn
+    @extend $alignItemsCenter
+
+  &__link
+    @extend $sourceSansProSemibold
+    @extend $textUppercase
+    margin-bottom 1.5vh
+    font-size 22px
+    color $white

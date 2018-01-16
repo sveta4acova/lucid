@@ -1,0 +1,22 @@
+.slick-dots
+  @extend $flexContainer
+  @extend $alignItemsCenter
+  height 16px
+
+  li
+    &:not(:last-child)
+      margin-right 21px
+    &.slick-active
+      button
+        sizeElement(13px, 13px)
+        background-color $white
+        border-color $white
+
+    button
+      @extend $transitionDefault
+      sizeElement(7px, 7px)
+      display block
+      border-radius 50%
+      border 1px solid rgba(255, 255, 255, .5)
+      font-size 0
+      cursor pointer

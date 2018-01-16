@@ -1,0 +1,38 @@
+.card
+  &__image-container
+    margin 0 auto 25px auto
+
+    &.card__image-container_circle
+      @extend $flexDisplay
+      @extend $alignItemsCenter
+      sizeElement(90px, 90px)
+      justify-content center
+      border-radius 50%
+      border 1px solid #1e1e1e
+
+  &__image
+    max-width 32px
+    max-height 34px
+    fill $blue
+
+  &__text-block
+    @extend $centerText
+
+  &__caption
+    color $blackGraphite
+    margin-bottom 10px
+    text-transform capitalize
+
+  &__image-container,
+  &__caption,
+  &__description
+    @extend $centerText
+
+  &__description
+    display inline-block
+    max-width 94%
+    a
+      @extend $transitionDefault
+      color inherit
+      &:hover
+        color $blue

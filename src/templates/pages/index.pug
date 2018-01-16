@@ -1,0 +1,105 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/card.pug
+	include ../blocks/list-item.pug
+	include ../blocks/review.pug
+
+	main.main#home
+		section.main__content
+			.main__description
+				h4.main__title Introducing lucid theme
+				h1.main__caption Carefully crafted and beautiful landing page
+				p.main__paragraph Etiam ullamcorper et turpis eget hendrerit. Praesent varius risus mi, at elementum magna ultricies accumsan. Cras venenatis lacus sed dolor placerat tempus. Morbi blandit at neque ut imperdiet.
+				div.main__btn-container
+					a(href='#').default-button.default-button_blue Download now
+					a(href='#').default-button View features
+			img(src="./assets/images/common/devices.png" alt="").main__image
+
+	section.features#features
+		.features__content
+			.block-header
+				h4.block-header__subcaption product overview
+				h2.block-header__caption List of amazing features
+			.features__cards
+				for item in featuresItems
+					+card(item)
+
+	section.details#about
+		.details__content
+			.details__image-container
+				img(src="./assets/images/common/devices.png" alt="").details__image
+			.details__info
+				.block-header.block-header_align-left
+					h4.block-header__subcaption dip into the details
+					h2.block-header__caption Beautiful on every device
+				p.details__description Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+				ul.list
+					for item in listDetailsItems
+						+list-item(item)
+
+	section.about
+		.about__content
+			.about__info
+				.block-header.block-header_align-left
+					h4.block-header__subcaption dip into the details
+					h2.block-header__caption Super easy to customize
+				p.about__description Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+			.about__image-container
+				img(src="./assets/images/common/device.png" alt="").about__image
+
+	section.plans#testimonials
+		.plans__content
+			.block-header
+				h4.block-header__subcaption quality has its price
+				h2.block-header__caption Pricings & Plans
+			.plans__carousel
+				for item in reviews
+					.plans__carousel-item
+						+review(item)
+
+	section.action
+		.action__content
+			p.action__text Like what you see?
+				span Get this great theme now!
+			.action__btn-container
+				a(href='#').default-button View features
+				a(href='#').default-button.default-button_blue Download now
+
+	section.contact#contact
+		.contact__content
+			.block-header
+				h4.block-header__subcaption stay in touch
+				h2.block-header__caption Contact us
+			.contact__cards
+				for item in contactCards
+					+card(item)
+			.contact__form-container
+				form.contact__form
+					.contact__form-left
+						input(type="text" placeholder="name*" name="name" minlength="2").contact__form-input
+						input(type="text" placeholder="email*" name="email").contact__form-input
+						input(type="text" placeholder="subject*" name="subject" minlength="2").contact__form-input
+					.contact__form-right
+						textarea(placeholder="message*" name="message" minlength="10").contact__form-message
+						button(type="submit").default-button.default-button_blue send message
+
+	footer.footer
+		.footer__social
+			for link in socialLinks
+				a(href=link.href target="_blank").footer__social-link
+					svg.footer__icon
+						use(xlink:href="./assets/images/svg-sprite/svg-sprite.svg#" + link.icon)
+		.footer__copyright copyright &copy; 2014 lucid onepage theme
+
+	section.mobile-menu
+		menu.mobile-menu__wrap
+			for item in headerLinks
+				li
+					a(href=item.linkAnchor).mobile-menu__link.nav-link #{item.linkContent}
+
+	include ../blocks/header.pug
+
+
+
+

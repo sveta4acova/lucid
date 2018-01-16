@@ -1,0 +1,21 @@
+.block-header
+  @extend $flexContainer
+  @extend $alignItemsCenter
+  @extend $flexColumn
+
+  &__subcaption
+    @extend $blueTitle
+    margin-bottom 5px
+
+  &__caption
+    color $blackGraphite
+    padding-bottom 30px
+    &:after
+      divider(-30px, 100%, auto 100%)
+
+  &.block-header_align-left
+    align-items flex-start
+
+    .block-header__caption
+      &:after
+        background-position left

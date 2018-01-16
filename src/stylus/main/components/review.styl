@@ -1,0 +1,30 @@
+.review
+  &__text
+    @extend $sourceSansProItalic
+    @extend $middleFontSize
+    margin-bottom 15px
+
+  &__author
+    @extend $flexDisplay
+    @extend $alignItemsCenter
+    font-style normal
+
+  &__avatar-container
+    margin-right 23px
+
+  &__avatar
+    border-radius 50%
+
+  &__text,
+  &__author-name,
+  &__author-company
+    color $white
+
+  &__author-name
+    letter-spacing -0.8px
+
+  &__author-company
+    @extend $textUppercase
+    @extend $sourceSansProBold
+    @extend $smallFontSize
+    letter-spacing -0.3px

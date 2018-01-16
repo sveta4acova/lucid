@@ -1,0 +1,36 @@
+.details
+  @extend $flexContainer
+  padding 70px 0 10px 0
+  overflow hidden
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+
+  &__image-container
+    padding 0 6.2% 0 1.5%
+
+  &__image
+    @extend $transitionSlow
+    transform translateX(-60%)
+    opacity 0
+    &.animate
+      transform translateX(0)
+      opacity 1
+
+  &__info
+    padding-top 47px
+
+  &__description
+    max-width 485px
+    margin-bottom 34px
+
+  .block-header
+    margin-bottom 16px
+
+  .block-header__subcaption
+    letter-spacing 1.4px
+
+  .block-header__caption
+    &:after
+      bottom -22px

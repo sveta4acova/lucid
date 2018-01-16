@@ -1,0 +1,30 @@
+.footer
+  @extend $flexContainer
+  @extend $alignItemsCenter
+  @extend $flexColumn
+  height 160px
+  background-color $blackBlue
+  padding-top 14px
+
+  &__social
+    @extend $flexContainer
+    margin-bottom 15px
+
+  &__social-link
+    &:not(:last-child)
+      margin-right 30px
+
+  &__icon
+    @extend $transitionDefault
+    fill $anthracite
+    max-width 20px
+    max-height 20px
+    &:hover
+      fill $blue
+
+  &__copyright
+    @extend $sourceSansProSemibold
+    @extend $smallFontSize
+    @extend $textUppercase
+    @extend $centerText
+    color $anthracite

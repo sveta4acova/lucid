@@ -1,0 +1,47 @@
+body
+	sizeElement(100%, 100%)
+	font-family "SourceSansPro-Regular"
+	@extend $defaultFontSize
+	background-color $white
+	line-height 1.44
+	color $lightGray
+	&.open-menu
+		overflow-y hidden
+		.mobile-menu
+			animation showInLeft .6s forwards
+
+h1
+	@extend $hugeFontSize
+
+h2
+	@extend $bigFontSize
+
+h3
+	@extend $middleFontSize
+
+h4
+	@extend $smallFontSize
+
+h1, h2
+	@extend $sourceSansProSemibold
+
+input
+	height 50px
+
+input,
+textarea
+	@extend $transitionDefault
+	@extend $defaultBorder
+	@extend $smallFontSize
+	border-radius 4px
+	padding 0 15px
+	color $white
+	font-family inherit
+	&::placeholder
+		text-transform uppercase
+		font-family "SourceSansPro-Bold"
+		color $anthracite
+
+	&.error
+		border-color #CD5C5C
+		color #CD5C5C

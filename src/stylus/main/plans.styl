@@ -1,0 +1,29 @@
+.plans
+  @extend $flexContainer
+  @extend $backgroundPosition
+  background-image url(../images/common/backgrounds/bg-02.jpg)
+  padding 59px 0
+
+  &__content
+    @extend $mainContainer
+
+  .block-header
+    margin-bottom 80px
+
+    &__caption
+      color $white
+      &:after
+        bottom -25px
+
+  .slick-list
+    margin-bottom 140px
+    overflow hidden
+
+  .slick-slide
+    &:nth-child(even)
+      .review
+        padding-left 15px
+
+  .review
+    &__text
+      padding-right 25px

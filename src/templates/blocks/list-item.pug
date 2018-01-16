@@ -1,0 +1,5 @@
+mixin list-item(item)
+  li.list__item
+    svg.list__image
+      use(xlink:href="./assets/images/svg-sprite/svg-sprite.svg#" + item.svgId)
+    span.list__text #{item.text}

@@ -1,0 +1,9 @@
+mixin review(item)
+  .review
+    blockquote.review__text #{item.text}
+    address.review__author
+      .review__avatar-container
+        img(src=item.avatar alt="").review__avatar
+      .review__author-data
+        .review__author-name #{item.name}
+        .review__author-company #{item.action}

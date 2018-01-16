@@ -1,0 +1,36 @@
+.about
+  @extend $flexContainer
+  background-color #f2f2f2
+  padding-bottom 14px
+  overflow hidden
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+    @extend $flexJustifyBetween
+    @extend $alignItemsCenter
+
+  &__info
+    margin-top -25px
+
+  &__description
+    max-width 485px
+
+  &__image
+    @extend $transitionSlow
+    margin 34px -20px 0 0
+    transform translateX(60%)
+    opacity 0
+    &.animate
+      transform translateX(0)
+      opacity 1
+
+  .block-header
+    margin-bottom 16px
+
+    &__subcaption
+      letter-spacing 1.4px
+
+    &__caption
+      &:after
+        bottom -22px

@@ -1,0 +1,12 @@
+.idea
+node_modules
+tmp
+validation.xml
+validation-report.json
+validation-status.json
+index.html
+/public/assets/css/
+/public/assets/js/
+/public/assets/vendor/
+/public/assets/images/
+/_tempvlidation.html

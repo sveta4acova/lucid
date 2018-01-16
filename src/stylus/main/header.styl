@@ -1,0 +1,93 @@
+.header
+  @extend $flexContainer
+  sizeElement(100%, 100px)
+  elementPosition(absolute, 0, 0)
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+    @extend $alignItemsCenter
+    @extend $flexJustifyBetween
+
+  &__logo
+    @extend $flexDisplay
+    @extend $alignItemsCenter
+
+  &__logo-name
+    @extend $quicksandBold
+    @extend $textUppercase
+    font-size 24px
+    color $white
+    margin-right 2px
+
+  &__logo-text
+    @extend $smallerFontSize
+    @extend $textUppercase
+    display inline-block
+    color $lightGray
+    opacity .7
+    letter-spacing 0.7px
+    max-width 50px
+
+  &__menu
+    @extend $flexDisplay
+    justify-content flex-end
+
+  &__menu-item
+    &:not(:last-child)
+      margin-right 23px
+
+  &__link
+    @extend $sourceSansProSemibold
+    @extend $averageFontSize
+    text-transform capitalize
+    color $whiteSnow
+    &:after
+      @extend $transitionDefault
+      divider(-6px, 100%, cover)
+      transform translateY(-9px)
+      opacity 0
+    &.active:after,
+    &:hover:after
+      transform translateY(0)
+      opacity 1
+
+  &__menu-icon
+    @extend $alignItemsCenter
+    position relative
+    display none
+    sizeElement(35px,25px)
+    cursor pointer
+    margin-top -5px
+    &.open-menu
+      z-index 5
+      .header__icon-line
+        background-color transparent
+        &:after,
+        &:before
+          top 0
+        &:after
+          transform rotate(45deg)
+        &:before
+          transform rotate(-45deg)
+
+  &__icon-line
+    @extend $transitionDefault
+    display block
+    position relative
+    sizeElement(100%, 3px)
+    background-color $whiteSnow
+    border-radius 10px
+    &:after,
+    &:before
+      @extend $pseudoElement
+      @extend $transitionDefault
+      sizeElement(inherit, inherit)
+      background-color $whiteSnow
+      position absolute
+      border-radius inherit
+    &:after
+      top 10px
+    &:before
+      top -10px
+

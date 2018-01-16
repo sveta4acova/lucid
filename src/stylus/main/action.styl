@@ -1,0 +1,25 @@
+.action
+  @extend $flexContainer
+  height 170px
+  background-color $blackBlue
+
+  &__content
+    @extend $mainContainer
+    @extend $flexDisplay
+    @extend $alignItemsCenter
+    @extend $flexJustifyBetween
+
+  &__text
+    @extend $bigFontSize
+    @extend $sourceSansProSemibold
+    color $white
+
+    span
+      @extend $sourceSansProLight
+
+  &__btn-container
+    white-space nowrap
+
+  .default-button
+    &:first-child
+      margin-right 20px

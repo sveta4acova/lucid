@@ -1,0 +1,15 @@
+include ../blocks/data.pug
+
+header.header
+	.header__content
+		a(href="/").header__logo
+			span.header__logo-name lucid
+			span.header__logo-text onepage theme
+		menu.header__menu
+			for link in headerLinks
+				li.header__menu-item
+					a(class=link.linkClass href=link.linkAnchor).header__link.nav-link #{link.linkContent}
+		.header__menu-icon
+			span.header__icon-line
+
+
