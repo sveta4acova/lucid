@@ -2,7 +2,7 @@ mixin card(item)
   figure.card
     div(class='card__image-container ' + item.addClass)
       svg.card__image
-        use(xlink:href="./assets/images/svg-sprite/svg-sprite.svg#" + item.svgId)
+        use(href="./assets/images/svg-sprite/svg-sprite.svg#" + item.svgId)
     figcaption.card__text-block
       if item.caption
         h3.card__caption #{item.caption}

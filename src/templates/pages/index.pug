@@ -52,7 +52,7 @@ block content
 		.plans__content
 			.block-header
 				h4.block-header__subcaption quality has its price
-				h2.block-header__caption Pricings & Plans
+				h2.block-header__caption Pricings &amp; Plans
 			.plans__carousel
 				for item in reviews
 					.plans__carousel-item
@@ -89,7 +89,7 @@ block content
 			for link in socialLinks
 				a(href=link.href target="_blank").footer__social-link
 					svg.footer__icon
-						use(xlink:href="./assets/images/svg-sprite/svg-sprite.svg#" + link.icon)
+						use(href="./assets/images/svg-sprite/svg-sprite.svg#" + link.icon)
 		.footer__copyright copyright &copy; 2014 lucid onepage theme
 
 	section.mobile-menu
