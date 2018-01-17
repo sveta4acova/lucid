@@ -1,10 +1,13 @@
 $(function(){
-  isVisible($('.details__image'));
-  isVisible($('.about__image'));
+	var $detailsImage = $('.details__image'),
+			$aboutImage = $('.about__image');
+
+  isVisible($detailsImage);
+  isVisible($aboutImage);
 
 	$(window).scroll(function(){
-		isVisible($('.details__image'));
-		isVisible($('.about__image'));
+    isVisible($detailsImage);
+    isVisible($aboutImage);
 	});
 
 	function isVisible(elem){
