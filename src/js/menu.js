@@ -1,6 +1,6 @@
-$(function(){
-  $(document).on('click', '.nav-link', function(){
-    var $this = $(this),
+$(function() {
+  $(document).on('click', '.nav-link', function() {
+    let $this = $(this),
       linkHref = $this.attr('href');
 
     if ($this.hasClass('mobile-menu__link')) {
@@ -13,8 +13,8 @@ $(function(){
     });
   });
 
-  GLOBALS.$menuOpenBtn.click(function(){
-    var $this = $(this);
+  GLOBALS.$menuOpenBtn.click(function() {
+    let $this = $(this);
 
     if($this.hasClass('open-menu')){
       $(document).trigger(CustomEvents.MENU_CLOSE);

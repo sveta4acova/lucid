@@ -1,6 +1,6 @@
-$(function(){
+$(() => {
 	$('.contact__form').validate({
-    errorPlacement: function(error, element) {
+    errorPlacement: (error, element) => {
     	return false;
 		},
 		rules: {

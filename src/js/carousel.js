@@ -1,5 +1,5 @@
-$(function(){
-  $(document).ready(function(){
+$(() => {
+  $(document).ready(() => {
     $('.plans__carousel').slick({
       arrows: false,
       dots: true,

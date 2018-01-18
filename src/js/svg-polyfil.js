@@ -1,3 +1,3 @@
-$(function(){
+$(() => {
   svg4everybody();
 });

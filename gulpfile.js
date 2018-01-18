@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
+    babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     pug = require('gulp-pug'),
@@ -47,6 +48,9 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
   return gulp.src(['./src/js/common/globals.js','./src/js/common/events.js', './src/js/*.js'])
     .pipe(concat('main.js', {newLine: ';'}))
+    .pipe(babel({
+      presets: ['env']
+    }))
     .pipe(uglify())
     .pipe(gulp.dest('./public/assets/js/'));
 });
